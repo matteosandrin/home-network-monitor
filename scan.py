@@ -6,8 +6,9 @@ import json
 import requests
 from scrape import extractOnlineDeviceInfo
 
+dir_path = os.path.dirname(os.path.abspath(__file__))
 config = configparser.ConfigParser()
-config.read("config.ini")
+config.read(os.path.join(dir_path, "config.ini"))
 
 def scanNetworkDevices():
     session = requests.Session()
@@ -53,8 +54,8 @@ def writeStatus(devices, path="./status.csv"):
     })
 
 
-devices_path = os.path.abspath("./devices.json")
-status_path = os.path.abspath("./status.csv")
+devices_path = os.path.join(dir_path, "devices.json")
+status_path = os.path.join(dir_path, "status.csv")
 
 devices = scanNetworkDevices()
 writeDeviceList(devices, path=devices_path)
