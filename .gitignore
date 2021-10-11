@@ -1,0 +1,6 @@
+*.ini
+*.json
+*.csv
+*.html
+.idea/
+__pycache__/
