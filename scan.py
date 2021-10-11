@@ -27,7 +27,7 @@ def loadDeviceList(path="./devices.json"):
     return []
 
 def writeDeviceList(data, path="./devices.json"):
-    devices = {d["hostname"] : d for d in loadDeviceList()}
+    devices = {d["hostname"] : d for d in loadDeviceList(path=path)}
     new_devices = {d["hostname"] : d for d in data}
     for hostname, d in new_devices.items():
         devices[hostname] = d
@@ -52,8 +52,10 @@ def writeStatus(devices, path="./status.csv"):
         "devices" : '||'.join(sorted(d["hostname"] for d in devices)),
     })
 
+
+devices_path = os.path.abspath("./devices.json")
+status_path = os.path.abspath("./status.csv")
+
 devices = scanNetworkDevices()
-writeDeviceList(devices)
-writeStatus(devices)
-
-
+writeDeviceList(devices, path=devices_path)
+writeStatus(devices, path=status_path)
