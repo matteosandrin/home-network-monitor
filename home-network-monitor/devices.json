@@ -1,0 +1,72 @@
+[
+    {
+        "hostname": "1a:05:44:78:88:7b",
+        "ip": "10.0.0.220",
+        "mac": "1A:05:44:78:88:7B"
+    },
+    {
+        "hostname": "4C:8B:30:CA:CE:A6",
+        "ip": "",
+        "mac": "4C:8B:30:CA:CE:A6"
+    },
+    {
+        "hostname": "65TCLRokuTV",
+        "ip": "10.0.0.113",
+        "mac": "64:E0:03:72:1C:C0"
+    },
+    {
+        "hostname": "DC:E9:94:F9:17:6C",
+        "ip": "10.0.0.126",
+        "mac": "DC:E9:94:F9:17:6C"
+    },
+    {
+        "hostname": "Lisas-MBP-2",
+        "ip": "10.0.0.143",
+        "mac": "38:F9:D3:29:4D:9E"
+    },
+    {
+        "hostname": "Lisas-iPhone",
+        "ip": "10.0.0.208",
+        "mac": "FA:79:84:6C:96:69"
+    },
+    {
+        "hostname": "Living-Room",
+        "ip": "10.0.0.9",
+        "mac": "F0:B3:EC:17:0A:CF"
+    },
+    {
+        "hostname": "MatteosMBP2187",
+        "ip": "10.0.0.88",
+        "mac": "38:F9:D3:74:D6:35"
+    },
+    {
+        "hostname": "MatteosoogleMac",
+        "ip": "10.0.0.231",
+        "mac": "88:66:5A:30:1D:C1"
+    },
+    {
+        "hostname": "MatteospleWatch",
+        "ip": "10.0.0.118",
+        "mac": "78:9F:70:84:AB:22"
+    },
+    {
+        "hostname": "Pixel-3a-XL",
+        "ip": "10.0.0.145",
+        "mac": "EA:05:6F:8E:B1:FA"
+    },
+    {
+        "hostname": "d4:5d:64:1c:28:e0",
+        "ip": "10.0.0.63",
+        "mac": "D4:5D:64:1C:28:E0"
+    },
+    {
+        "hostname": "iRobot-A0CF4ECA53154FF4ACCEEE5F5D2CB17F",
+        "ip": "10.0.0.137",
+        "mac": "50:14:79:88:61:85"
+    },
+    {
+        "hostname": "raspberrypi",
+        "ip": "10.0.0.157",
+        "mac": "DC:A6:32:BD:FF:0C"
+    }
+]
