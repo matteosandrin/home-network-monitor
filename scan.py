@@ -65,8 +65,8 @@ status_path = os.path.join(dir_path, "status.csv")
 devices = scanNetworkDevices()
 writeDeviceList(devices, path=devices_path)
 writeStatus(devices, path=status_path)
-commitToGit([
-    devices_path,
-    status_path,
-])
+# commitToGit([
+#     devices_path,
+#     status_path,
+# ])
 
