@@ -9,6 +9,7 @@ from scrape import extractOnlineDeviceInfo
 dir_path = os.path.dirname(os.path.abspath(__file__))
 config = configparser.ConfigParser()
 config.read(os.path.join(dir_path, "config.ini"))
+iso_date = datetime.datetime.now().isoformat()
 
 def scanNetworkDevices():
     session = requests.Session()
@@ -49,10 +50,14 @@ def writeStatus(devices, path="./status.csv"):
     if not exists:
         writer.writeheader()
     writer.writerow({
-        "date" : datetime.datetime.now().isoformat(),
+        "date" : iso_date,
         "devices" : '||'.join(sorted(d["hostname"] for d in devices)),
     })
 
+def commitToGit(paths):
+    os.system("/usr/bin/git --git-dir {}/.git add {}".format(dir_path, " ".join(paths)))
+    os.system("/usr/bin/git --git-dir {}/.git commit -m \"Commit new data at {}\"".format(dir_path, iso_date))
+    os.system("/usr/bin/git --git-dir {}/.git push origin master".format(dir_path))
 
 devices_path = os.path.join(dir_path, "devices.json")
 status_path = os.path.join(dir_path, "status.csv")
@@ -60,3 +65,8 @@ status_path = os.path.join(dir_path, "status.csv")
 devices = scanNetworkDevices()
 writeDeviceList(devices, path=devices_path)
 writeStatus(devices, path=status_path)
+commitToGit([
+    devices_path,
+    status_path,
+])
+
